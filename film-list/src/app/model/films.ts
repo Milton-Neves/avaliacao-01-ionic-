@@ -10,6 +10,8 @@
 
 
 // COM INTERFACE
+
+//Neste caso, retiro as exclamações (!)
 export interface Filmes {
   titulo: string;
   diretor: string;
