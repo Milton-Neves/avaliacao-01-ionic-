@@ -8,11 +8,9 @@ import { FilmsService } from '../services/films.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   filmes!: Filmes[];
 
   constructor(private filmeService: FilmsService) {
     this.filmes = this.filmeService.getFilmes();
   }
-
 }
