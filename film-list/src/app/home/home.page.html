@@ -1,18 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> Lista de Filmes </ion-title>
+    <ion-title><strong> Lista de Filmes </strong>- 80's and 90's </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-card *ngFor="let filme of filmes">
+  <ion-list *ngFor="let filme of filmes">
+    <ion-card class="card-film">
       <ion-card-header> {{ filme.titulo }} </ion-card-header>
-      <ion-card-content>
+      <img alt="#" width="200" heigth="400" [src]="filme.cartaz" />
+
+      <ion-card-content class="text-card" >
         <p><strong>Título:</strong> {{ filme.titulo }}</p>
         <p><strong>Diretor:</strong> {{ filme.diretor }}</p>
         <p><strong>Origem:</strong> {{ filme.origem }}</p>
-        <p><strong>Cartaz:</strong> {{ filme.cartaz }}</p>
         <p><strong>Ano:</strong> {{ filme.ano }}</p>
       </ion-card-content>
     </ion-card>

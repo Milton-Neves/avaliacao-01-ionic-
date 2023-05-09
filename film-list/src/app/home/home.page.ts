@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
-import { FilmsService } from '../services/films.service';
 import { Filmes } from '../model/films';
-import { IonicModule } from '@ionic/angular';
+import { FilmsService } from '../services/films.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  standalone: true,
-
-  imports: [IonicModule],
 })
-export class ListaFilmesPage {
+export class HomePage {
+
   filmes!: Filmes[];
 
-  constructor(private filmeService: FilmsService) {}
-
-  ionViewWillEnter() {
+  constructor(private filmeService: FilmsService) {
     this.filmes = this.filmeService.getFilmes();
   }
+
 }

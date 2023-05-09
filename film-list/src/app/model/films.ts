@@ -1,5 +1,3 @@
-import { FilmsTypeEnum } from '../enum/filmsType';
-
 export class Filmes {
   titulo!: string;
   diretor!: string;
